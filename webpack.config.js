@@ -23,9 +23,14 @@ module.exports = {
   output: {
     path: resolve('lib'),
     publicPath: '',
-    filename: '[name].js',
+    filename: 'my-package.js',
     // 兼容不同的环境，设置 library 属性
-    library: 'my-package',
+    library: 'myPackage',
+    // library: {
+    //   commonjs: 'my-package-a',
+    //   amd: 'my-package-b',
+    //   root: 'my-package3-c',
+    // },
     // 格式设置为 umd 格式，使其同时支持 import 与 require（多格式兼容）
     // 格式包含（var, this, window, umd，见官网）
     libraryTarget: 'umd'
